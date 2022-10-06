@@ -3,8 +3,10 @@ package com.example.calculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.core.text.isDigitsOnly
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +30,45 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-        Toast.makeText(this, "button pressed", Toast.LENGTH_SHORT).show()
+        val button = view as Button
+        val buttonText = button.text.toString()
+
+        when (button.id) {
+            R.id.btnClear -> onClear()
+            R.id.btnAdd, R.id.btnMinus, R.id.btnMultiply, R.id.btnDivide -> onOperator(buttonText)
+            R.id.btnBackspace -> onBackspace()
+            R.id.btnDP -> onDecimalPoint()
+            R.id.btnEqual -> onEqual()
+            R.id.btnNegate -> onNegate()
+            else -> onDigit(buttonText.toInt())
+        }
+    }
+
+    private fun onClear() {
+
+    }
+
+    private fun onOperator(operator: String) {
+
+    }
+
+    private fun onBackspace() {
+
+    }
+
+    private fun onDecimalPoint() {
+
+    }
+
+    private fun onEqual() {
+
+    }
+
+    private fun onNegate() {
+
+    }
+
+    private fun onDigit(digit: Int) {
+
     }
 }
