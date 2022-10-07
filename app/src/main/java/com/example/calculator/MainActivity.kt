@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val button = view as Button
         val buttonText = button.text.toString()
 
-        if (tvDisplay?.text == R.string.Undefined.toString()) {
+        if (tvDisplay?.text.toString() == getString(R.string.Undefined)) {
             tvDisplay?.text = ""
         }
 
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val operands = getOperands("/")
 
                 if (operands[1] == 0.0)
-                    tvDisplay?.text = R.string.Undefined.toString()
+                    tvDisplay?.text = getString(R.string.Undefined)
                 else {
                     val answer = operands[0] / operands[1]
                     tvDisplay?.text = answer.toString()
