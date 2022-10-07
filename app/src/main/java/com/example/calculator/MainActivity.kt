@@ -1,13 +1,12 @@
 package com.example.calculator
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.text.isDigitsOnly
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     var tvDisplay: TextView? = null
@@ -76,6 +75,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun onDigit(digit: Int) {
-
+        val displayText = tvDisplay?.text.toString()
+        tvDisplay?.append(digit.toString())
     }
 }
