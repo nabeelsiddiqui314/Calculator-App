@@ -71,11 +71,34 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun onNegate() {
+        val displayText = tvDisplay?.text.toString()
 
+       if (!containsOperator() && displayText.isNotEmpty()) {
+           if (hasNegativePrefix()) {
+               tvDisplay?.text = displayText.removePrefix("-")
+           }
+           else {
+               tvDisplay?.text = "-" + displayText
+           }
+       }
     }
 
     private fun onDigit(digit: Int) {
-        val displayText = tvDisplay?.text.toString()
         tvDisplay?.append(digit.toString())
+    }
+
+    private fun hasNegativePrefix() : Boolean {
+        val displayText = tvDisplay?.text.toString()
+        return displayText.isNotEmpty() && displayText.elementAt(0) == '-'
+    }
+
+    private fun containsOperator() : Boolean {
+        var displayText = tvDisplay?.text.toString()
+
+        if (hasNegativePrefix())
+            displayText = displayText.removePrefix("-")
+
+        return displayText.contains("+") || displayText.contains("+")
+                || displayText.contains("+") || displayText.contains("+")
     }
 }
