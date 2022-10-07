@@ -57,7 +57,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun onBackspace() {
-
+        val displayText = tvDisplay?.text.toString()
+        if (displayText.isNotEmpty()) {
+            tvDisplay?.text = displayText.dropLast(1)
+        }
     }
 
     private fun onDecimalPoint() {
