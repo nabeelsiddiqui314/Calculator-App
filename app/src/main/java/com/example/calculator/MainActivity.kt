@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val button = view as Button
         val buttonText = button.text.toString()
 
+        if (tvDisplay?.text == R.string.Undefined.toString()) {
+            tvDisplay?.text = ""
+        }
+
         when (button.id) {
             R.id.btnClear -> onClear()
             R.id.btnAdd, R.id.btnMinus, R.id.btnMultiply, R.id.btnDivide -> onOperator(buttonText)
@@ -77,7 +81,53 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun onEqual() {
+        val displayText = tvDisplay?.text.toString()
 
+        val negativeCount = displayText.count { it == '-' }
+
+        if (containsOperator() && isLastDigit()) {
+            if (displayText.contains("+")) {
+                val operands = getOperands("+")
+                val answer = operands[0] + operands[1]
+                tvDisplay?.text = answer.toString()
+            }
+            else if (displayText.contains("*")) {
+                val operands = getOperands("*")
+                val answer = operands[0] * operands[1]
+                tvDisplay?.text = answer.toString()
+            }
+            else if (displayText.contains("/")) {
+                val operands = getOperands("/")
+
+                if (operands[1] == 0.0)
+                    tvDisplay?.text = R.string.Undefined.toString()
+                else {
+                    val answer = operands[0] / operands[1]
+                    tvDisplay?.text = answer.toString()
+                }
+            }
+            else {
+                val operands = getOperands("-")
+                val answer = operands[0] - operands[1]
+                tvDisplay?.text = answer.toString()
+            }
+        }
+    }
+
+    private fun getOperands(operator: String) : List<Double> {
+        var displayText = tvDisplay?.text.toString()
+        var stringOperands: List<String>
+
+        if (operator == "-" && hasNegativePrefix()) {
+            displayText = displayText.removePrefix("-")
+            val operands = displayText.split(operator)
+            stringOperands =  listOf("-" + operands[0], operands[1])
+        }
+        else {
+            stringOperands = displayText.split(operator)
+        }
+
+        return listOf(stringOperands[0].toDouble(), stringOperands[1].toDouble())
     }
 
     private fun onNegate() {
