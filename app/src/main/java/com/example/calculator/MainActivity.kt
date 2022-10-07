@@ -66,7 +66,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun onDecimalPoint() {
+        val displayText = tvDisplay?.text.toString()
+        val dpCount = displayText.count {it == '.'}
 
+        if (isLastDigit()) {
+            if ((!containsOperator() && dpCount == 0) || (containsOperator() && dpCount < 2)) {
+                tvDisplay?.append(".")
+            }
+        }
     }
 
     private fun onEqual() {
