@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (hasNegativePrefix())
             displayText = displayText.removePrefix("-")
 
-        return displayText.contains("+") || displayText.contains("+")
-                || displayText.contains("+") || displayText.contains("+")
+        return displayText.contains("+") || displayText.contains("-")
+                || displayText.contains("*") || displayText.contains("/")
     }
 }
