@@ -52,7 +52,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun onOperator(operator: String) {
-
+        if (tvDisplay?.text.isNullOrEmpty() && operator == "-")
+            tvDisplay?.append("-")
+        else if (!containsOperator() && isLastDigit())
+            tvDisplay?.append(operator)
     }
 
     private fun onBackspace() {
@@ -85,6 +88,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun onDigit(digit: Int) {
         tvDisplay?.append(digit.toString())
+    }
+
+    private fun isLastDigit() : Boolean {
+        return tvDisplay?.text?.lastOrNull()?.isDigit() ?: false
     }
 
     private fun hasNegativePrefix() : Boolean {
