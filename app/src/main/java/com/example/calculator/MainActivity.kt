@@ -60,6 +60,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             tvDisplay?.append("-")
         else if (!containsOperator() && isLastDigit())
             tvDisplay?.append(operator)
+        else {
+            onEqual()
+            if (!containsOperator() && isLastDigit())
+                tvDisplay?.append(operator)
+        }
     }
 
     private fun onBackspace() {
