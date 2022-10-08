@@ -16,6 +16,7 @@
         android:layout_height="250dp"
         android:text=""
         android:textSize="48dp"
+        android:textColor="@color/display_text"
         android:gravity="bottom|end"/>
 
     <LinearLayout
@@ -32,6 +33,7 @@
             android:layout_weight="1"
             android:text="C"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btnDivide"
@@ -41,6 +43,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btnMultiply"
@@ -50,6 +53,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btnBackspace"
@@ -59,6 +63,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="16sp"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
     </LinearLayout>
 
@@ -76,6 +81,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btn8"
@@ -85,6 +91,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btn9"
@@ -94,6 +101,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btnMinus"
@@ -103,6 +111,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
     </LinearLayout>
 
@@ -120,6 +129,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btn5"
@@ -129,6 +139,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btn6"
@@ -138,6 +149,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btnAdd"
@@ -147,6 +159,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
     </LinearLayout>
 
@@ -164,6 +177,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btn2"
@@ -173,6 +187,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btn3"
@@ -182,6 +197,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btnNegate"
@@ -191,6 +207,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
     </LinearLayout>
 
@@ -208,6 +225,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btn0"
@@ -217,6 +235,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/btnEqual"
@@ -226,6 +245,7 @@
             android:layout_weight="2"
             android:layout_margin="@dimen/button_margin"
             android:textSize="@dimen/button_textSize"
+            android:textColor="@color/button_text"
             android:backgroundTint="@color/button"/>
 
     </LinearLayout>
