@@ -36,7 +36,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val button = view as Button
         val buttonText = button.text.toString()
 
-        if (tvDisplay?.text.toString() == getString(R.string.Undefined)) {
+        val displayText = tvDisplay?.text.toString()
+
+        if (displayText == getString(R.string.Undefined) || displayText == getString(R.string.Infinity)) {
             tvDisplay?.text = ""
         }
 
