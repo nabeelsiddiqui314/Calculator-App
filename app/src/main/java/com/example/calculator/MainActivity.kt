@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val view = parentLayout.getChildAt(i)
 
             // recurse if layout is found
-            if (view is LinearLayout)
-                registerButtonListeners(view)
-            else
-                view.setOnClickListener(this)
+            when (view) {
+                is LinearLayout -> registerButtonListeners(view)
+                is Button -> view.setOnClickListener(this)
+            }
         }
     }
 
